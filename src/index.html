@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../dist/output.css" />
     <script defer src="./script.js"></script>
-    <title>Easy Care</title>
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/external-victoruler-flat-victoruler/64/000000/external-medical-cannabis-victoruler-flat-victoruler.png"
+      type="image/x-icon"
+    />
+    <title>Easy Care - Medical services at your door!</title>
   </head>
   <body>
     <header>
@@ -37,7 +42,7 @@
                 tabindex="0"
                 class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100/75 backdrop-blur-xl rounded-box w-52"
               >
-                <li><a>Link 1</a></li>
+                <li><a href="#section-1">Home</a></li>
                 <li><a>Link 2</a></li>
                 <li><a>Link 3</a></li>
                 <li><a>Link 4</a></li>
@@ -48,7 +53,7 @@
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal p-0">
-              <li><a>Link 1</a></li>
+              <li><a class="#section-1">Home</a></li>
               <li><a>Link 2</a></li>
               <li><a>Link 3</a></li>
               <li><a>Link 4</a></li>
@@ -60,6 +65,31 @@
           </div>
         </div>
       </nav>
+      <!-- Header -->
+      <section class="min-h-screen bg-base-200" id="section-1">
+        <div class="hero container mx-auto pt-32">
+          <div class="hero-content flex-col lg:flex-row-reverse">
+            <img
+              src="./img/hero.jpg"
+              class="max-w-sm rounded-lg shadow-2xl"
+              alt="Woman in Green Crew Neck T-shirt Holding Black Tablet Computer"
+            />
+            <div>
+              <h1 class="text-5xl font-bold">
+                Always laugh when you can, it is cheap medicine
+              </h1>
+              <p class="py-6">
+                The doctor sees all the weakness of mankind; the lawyer all the
+                wickedness, the theologian all the stupidity. The good physician
+                treats the disease; the great physician treats the patient who
+                has the disease. The art of medicine consists in amusing the
+                patient while nature cures the disease.
+              </p>
+              <button class="btn btn-primary">Get started</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
   </body>
 </html>
