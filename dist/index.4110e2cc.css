@@ -1795,6 +1795,53 @@ html {
   justify-content: flex-end;
 }
 
+.stats {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+  border-radius: var(--rounded-box, 1rem);
+  display: inline-grid;
+}
+
+:where(.stats) {
+  grid-auto-flow: column;
+  overflow-x: auto;
+}
+
+.stat {
+  width: 100%;
+  -moz-column-gap: 1rem;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  --tw-border-opacity: .1;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 1rem;
+  padding: 1rem 1.5rem;
+  display: inline-grid;
+}
+
+.stat-title {
+  white-space: nowrap;
+  opacity: .6;
+  grid-column-start: 1;
+}
+
+.stat-value {
+  white-space: nowrap;
+  grid-column-start: 1;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 2.5rem;
+}
+
+.stat-desc {
+  white-space: nowrap;
+  opacity: .6;
+  grid-column-start: 1;
+  font-size: .75rem;
+  line-height: 1rem;
+}
+
 .avatar-group {
   display: flex;
   overflow: hidden;
@@ -2209,6 +2256,15 @@ html {
   }
 }
 
+:where(.stats) > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-x-reverse: 0;
+  border-right-width: calc(1px * var(--tw-divide-x-reverse));
+  border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)) );
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(0px * calc(1 - var(--tw-divide-y-reverse)) );
+  border-bottom-width: calc(0px * var(--tw-divide-y-reverse));
+}
+
 @keyframes toast-pop {
   0% {
     opacity: 0;
@@ -2425,6 +2481,10 @@ html {
   flex-direction: column;
 }
 
+.place-items-center {
+  place-items: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -2487,12 +2547,26 @@ html {
   padding-bottom: 1.5rem;
 }
 
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.px-32 {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
 .pt-32 {
   padding-top: 8rem;
 }
 
 .pt-16 {
   padding-top: 4rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-xl {
@@ -2521,6 +2595,11 @@ html {
 .text-base-content {
   --tw-text-opacity: 1;
   color: hsl(var(--bc) / var(--tw-text-opacity));
+}
+
+.text-secondary {
+  --tw-text-opacity: 1;
+  color: hsl(var(--s) / var(--tw-text-opacity));
 }
 
 .shadow {
